@@ -5,5 +5,12 @@
       "title": "title1",
       "caption": "cap1"
     }
+  ],
+
+  "names": [
+    {
+      "id": "3",
+      "name": "name1"
+    }
   ]
 }

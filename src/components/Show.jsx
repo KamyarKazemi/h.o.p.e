@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchItems } from "../store/slices/thunks/FetchThunk";
+import Names from "./Names";
 
 function Show() {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function Show() {
           <button className="bg-blue-700 p-2 rounded-2xl">submit</button>
         </form>
         <div className="bg-blue-500 p-3 rounded max-w-80">{content}</div>
+        <Names />
       </div>
     </>
   );
