@@ -10,7 +10,7 @@ function Show() {
   });
 
   useEffect(() => {
-    dispatch(fetchItems);
+    dispatch(fetchItems());
   }, [dispatch]);
 
   let content;
@@ -21,7 +21,7 @@ function Show() {
     content = <div>error...</div>;
   } else {
     content = (
-      <div>
+      <div className="flex flex-col gap-3">
         {items.map((item) => (
           <div key={item.id}>
             <h1>{item.title}</h1>
@@ -39,7 +39,7 @@ function Show() {
           <input className="border-2" type="text" placeholder="type text..." />
           <button className="bg-blue-700 p-2 rounded-2xl">submit</button>
         </form>
-        {content}
+        <div className="bg-blue-500 p-3 rounded max-w-80">{content}</div>
       </div>
     </>
   );
